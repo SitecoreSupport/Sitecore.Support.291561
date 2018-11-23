@@ -445,10 +445,6 @@ namespace Sitecore.Support.Resources.Media
             Assert.ArgumentNotNull(options, "options");
             Assert.ArgumentNotNull(item, "item");
             Assert.Required(item.Database, "item.Database");
-            if (!options.Versioned)
-            {
-                return item.Database.Languages;
-            }
             return new Language[]
             {
                 item.Language
